@@ -27,6 +27,11 @@ class Api::V1::EventsController < ApiController
 
       if @event.update(event_params)
         render
+      else
+        render status: :unprocessable_entity, json: {
+          message: 'Validation Failed',
+          errors: @event.errors.full_messages
+        }
       end
     end
   end
