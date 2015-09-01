@@ -20,3 +20,30 @@ describe 'GET /v1/events/:id' do
     })
   end
 end
+
+describe 'POST /v1/events' do
+  it 'saves the address, lat, lon, name and started_at date' do
+    date = Time.zone.now
+    device_token = '123abcd456xyz'
+    owner = create(:user, device_token: device_token)
+    post('/v1/events', {
+      address: '123 Example St.',
+      ended_at: date,
+      lat: 1.0,
+      lon: 1.0,
+      name: 'Fun Place!!', started_at: date,
+      owner: {
+        id: owner.id }
+    }.to_json, set_headers(device_token))
+
+    event = Event.last
+    expect(response_json).to eq({ 'id' => event.id })
+    expect(event.address).to eq '123 Example St.'
+    expect(event.ended_at.to_i).to eq date.to_i
+    expect(event.lat).to eq 1.0
+    expect(event.lon).to eq 1.0
+    expect(event.name).to eq 'Fun Place!!'
+    expect(event.started_at.to_i).to eq date.to_i
+    expect(event.owner).to eq owner
+  end
+end
