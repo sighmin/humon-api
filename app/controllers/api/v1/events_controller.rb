@@ -20,6 +20,17 @@ class Api::V1::EventsController < ApiController
     end
   end
 
+  def update
+    authorize do |user|
+      @user = user
+      @event = Event.find(params[:id])
+
+      if @event.update(event_params)
+        render
+      end
+    end
+  end
+
   private
 
   def event_params
