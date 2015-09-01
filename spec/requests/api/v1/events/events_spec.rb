@@ -46,4 +46,21 @@ describe 'POST /v1/events' do
     expect(event.started_at.to_i).to eq date.to_i
     expect(event.owner).to eq owner
   end
+
+  it 'returns an error message when invalid' do
+    device_token = '123abcd456xyz'
+
+    post '/v1/events', {}.to_json, set_headers(device_token)
+
+    expect(response.code.to_i).to eq 422
+    expect(response_json).to eq({
+      'message' => 'Validation Failed',
+      'errors' => [
+        "Lat can't be blank",
+        "Lon can't be blank",
+        "Name can't be blank",
+        "Started at can't be blank"
+      ]
+    })
+  end
 end
