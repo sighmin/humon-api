@@ -26,6 +26,7 @@ gem "simple_form"
 gem "title"
 gem "uglifier"
 gem "jbuilder", "~> 2.3.1"
+gem "geocoder", "~> 1.2.9"
 
 group :development do
   gem "spring"

@@ -7,4 +7,6 @@ class Event < ActiveRecord::Base
   has_many :attendances
   has_many :users, through: :attendances
   belongs_to :owner, foreign_key: :user_id, class_name: 'User'
+
+  reverse_geocoded_by :lat, :lon
 end
