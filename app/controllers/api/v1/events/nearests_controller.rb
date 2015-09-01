@@ -5,5 +5,11 @@ class Api::V1::Events::NearestsController < ApiController
       params[:radius],
       units: :km
     )
+
+    if @events.count(:all) > 0
+      render
+    else
+      render json: { message: 'No Events Found' }
+    end
   end
 end
