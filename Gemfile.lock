@@ -65,13 +65,6 @@ GEM
       capybara (>= 2.3.0, < 2.6.0)
       json
     coderay (1.1.0)
-    coffee-rails (4.1.0)
-      coffee-script (>= 2.2.0)
-      railties (>= 4.0.0, < 5.0)
-    coffee-script (2.4.1)
-      coffee-script-source
-      execjs
-    coffee-script-source (1.9.1.1)
     crack (0.4.2)
       safe_yaml (~> 1.0.0)
     database_cleaner (1.4.1)
@@ -108,7 +101,6 @@ GEM
     geocoder (1.2.9)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
-    high_voltage (2.4.0)
     highline (1.7.3)
     i18n (0.7.0)
     i18n-tasks (0.8.7)
@@ -144,7 +136,6 @@ GEM
     newrelic_rpm (3.13.0.299)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
-    normalize-rails (3.0.3)
     pg (0.18.2)
     pry (0.10.1)
       coderay (~> 1.1.0)
@@ -188,7 +179,6 @@ GEM
     rake (10.4.2)
     recipient_interceptor (0.1.2)
       mail
-    refills (0.1.0)
     rspec-core (3.3.2)
       rspec-support (~> 3.3.0)
     rspec-expectations (3.3.1)
@@ -208,17 +198,8 @@ GEM
     rspec-support (3.3.0)
     safe_yaml (1.0.4)
     sass (3.4.18)
-    sass-rails (5.0.3)
-      railties (>= 4.0.0, < 5.0)
-      sass (~> 3.1)
-      sprockets (>= 2.8, < 4.0)
-      sprockets-rails (>= 2.0, < 4.0)
-      tilt (~> 1.1)
     shoulda-matchers (2.8.0)
       activesupport (>= 3.0.0)
-    simple_form (3.1.1)
-      actionpack (~> 4.0)
-      activemodel (~> 4.0)
     simplecov (0.10.0)
       docile (~> 1.1.0)
       json (~> 1.8)
@@ -240,7 +221,6 @@ GEM
     thor (0.19.1)
     thread (0.2.2)
     thread_safe (0.3.5)
-    tilt (1.4.1)
     timecop (0.8.0)
     tins (1.6.0)
     title (0.0.5)
@@ -248,9 +228,6 @@ GEM
       rails (>= 3.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.7.2)
-      execjs (>= 0.3.0)
-      json (>= 1.8.0)
     web-console (2.2.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
@@ -269,11 +246,9 @@ DEPENDENCIES
   airbrake
   autoprefixer-rails
   awesome_print
-  bourbon (~> 4.2.0)
   bundler-audit
   byebug
   capybara-webkit (>= 1.2.0)
-  coffee-rails (~> 4.1.0)
   database_cleaner
   delayed_job_active_record
   dotenv-rails
@@ -282,14 +257,12 @@ DEPENDENCIES
   flutie
   formulaic
   geocoder (~> 1.2.9)
-  high_voltage
   i18n-tasks
   jbuilder (~> 2.3.1)
   jquery-rails
   launchy
   neat (~> 1.7.0)
   newrelic_rpm (>= 3.9.8)
-  normalize-rails (~> 3.0.0)
   pg
   pry-rails
   puma
@@ -298,17 +271,13 @@ DEPENDENCIES
   rails (~> 4.2.0)
   rails_stdout_logging
   recipient_interceptor
-  refills
   rspec-rails (~> 3.3.0)
-  sass-rails (~> 5.0)
   shoulda-matchers
-  simple_form
   simplecov
   spring
   spring-commands-rspec
   timecop
   title
-  uglifier
   web-console
   webmock
 
