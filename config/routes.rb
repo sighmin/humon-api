@@ -5,6 +5,7 @@ Rails.application.routes.draw do
         resources :nearests, only: [:index]
       end
       resources :events, only: [:show, :create, :update]
+      resources :users, only: [:create]
     end
   end
 end
